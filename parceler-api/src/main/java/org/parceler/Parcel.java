@@ -66,13 +66,12 @@ public @interface Parcel {
 
     boolean parcelsIndex() default true;
 
+    Class analysisLimit() default Object.class;
+
+    Class<? extends ParcelConverter> converter() default ParcelConverter.EmptyConverter.class;
+
     enum Serialization {
         FIELD,
         METHOD
     }
-
-    /**
-     * Optional Converter class.
-     */
-    Class<? extends ParcelConverter> converter() default ParcelConverter.EmptyConverter.class;
 }
