@@ -3,7 +3,7 @@ package org.parceler;
 import com.google.auto.value.AutoValue;
 
 @AutoValue
-@Parcel(Parcel.Serialization.METHOD)
+@Parcel(Parcel.Serialization.BEAN)
 public abstract class Example {
 
     @ParcelFactory
